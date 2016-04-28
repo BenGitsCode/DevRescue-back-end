@@ -25,6 +25,7 @@ ActiveRecord::Schema.define(version: 20160428145248) do
 
   add_index "examples", ["user_id"], name: "index_examples_on_user_id", using: :btree
 
+  # POST table is not used....just afraid to delete
   create_table "posts", force: :cascade do |t|
     t.string   "title"
     t.string   "resource"
@@ -33,7 +34,7 @@ ActiveRecord::Schema.define(version: 20160428145248) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
-
+  # POST table is not used....just afraid to delete
   add_index "posts", ["user_id"], name: "index_posts_on_user_id", using: :btree
 
   create_table "rescues", force: :cascade do |t|

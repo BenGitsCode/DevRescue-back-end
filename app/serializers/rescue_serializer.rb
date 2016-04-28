@@ -1,4 +1,4 @@
 class RescueSerializer < ActiveModel::Serializer
   attributes :id, :title, :url, :tag
-  has_one :user_id
+  has_one :user
 end

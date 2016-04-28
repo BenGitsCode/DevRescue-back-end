@@ -4,7 +4,7 @@ class CreateRescues < ActiveRecord::Migration
       t.string :title
       t.string :url
       t.string :tag
-      t.references :user_id, index: true, foreign_key: true
+      t.references :user, index: true, foreign_key: true
 
       t.timestamps null: false
     end

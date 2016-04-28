@@ -54,6 +54,6 @@ class RescuesController < ApplicationController
     end
 
     def rescue_params
-      params.require(:rescue).permit(:title, :url, :tag, :user_id_id)
+      params.require(:rescue).permit(:title, :url, :tag, :user_id)
     end
 end

@@ -4,7 +4,7 @@ class RescuesController < ProtectedController
   # GET /rescues
   # GET /rescues.json
   def index
-    @rescues = Rescue.all
+    @rescues = current_user.rescues.all
 
     render json: @rescues
   end
@@ -38,7 +38,6 @@ class RescuesController < ProtectedController
       render json: @rescue.errors, status: :unprocessable_entity
     end
   end
-
 
   # DELETE /rescues/1
   # DELETE /rescues/1.json

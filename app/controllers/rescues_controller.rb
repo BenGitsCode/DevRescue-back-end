@@ -1,4 +1,4 @@
-class RescuesController < ApplicationController
+class RescuesController < ProtectedController
   before_action :set_rescue, only: [:show, :update, :destroy]
 
   # GET /rescues
@@ -18,7 +18,7 @@ class RescuesController < ApplicationController
   # POST /rescues
   # POST /rescues.json
   def create
-    @rescue = Rescue.new(rescue_params)
+    @rescue = current_user.rescues.build(rescue_params)
 
     if @rescue.save
       render json: @rescue, status: :created, location: @rescue
@@ -50,7 +50,7 @@ class RescuesController < ApplicationController
   private
 
     def set_rescue
-      @rescue = Rescue.find(params[:id])
+      @rescue = current_user.rescues.find(params[:id])
     end
 
     def rescue_params

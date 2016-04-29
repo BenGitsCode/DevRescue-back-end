@@ -30,7 +30,7 @@ class RescuesController < ProtectedController
   # PATCH/PUT /rescues/1
   # PATCH/PUT /rescues/1.json
   def update
-    @rescue = Rescue.find(params[:id])
+    # @rescue = Rescue.find(params[:id]) not necessary?
 
     if @rescue.update(rescue_params)
       head :no_content
@@ -38,6 +38,7 @@ class RescuesController < ProtectedController
       render json: @rescue.errors, status: :unprocessable_entity
     end
   end
+
 
   # DELETE /rescues/1
   # DELETE /rescues/1.json

@@ -33,7 +33,7 @@ class RescuesController < ProtectedController
     # @rescue = Rescue.find(params[:id]) not necessary?
 
     if @rescue.update(rescue_params)
-      head :no_content
+      render json: @rescue, status: :ok
     else
       render json: @rescue.errors, status: :unprocessable_entity
     end

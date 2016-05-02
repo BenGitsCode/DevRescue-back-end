@@ -49,11 +49,11 @@ class RescuesController < ProtectedController
 
   private
 
-    def set_rescue
-      @rescue = current_user.rescues.find(params[:id])
-    end
+  def set_rescue
+    @rescue = current_user.rescues.find(params[:id])
+  end
 
-    def rescue_params
-      params.require(:rescue).permit(:title, :url, :tag, :user_id)
-    end
+  def rescue_params
+    params.require(:rescue).permit(:title, :url, :tag, :user_id)
+  end
 end

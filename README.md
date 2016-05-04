@@ -45,6 +45,22 @@ If the request is successful the response will have an HTTP status of 204 No
 If the request is unsuccessful the reponse will have an HTTP status of 400 Bad
  Request.
 
+### Adding new rescue links as `JSON`:
+
+```json
+'{
+  "rescue": {
+    "title": "Guide to refactoring and Sniffing Out Code Smells",
+    "url": "https://sourcemaking.com/refactoring/smells",
+    "tag": "cheatsheet, refactor, code smells, "
+  }
+}'
+
+```
+
+
+
+
 ---
 
 

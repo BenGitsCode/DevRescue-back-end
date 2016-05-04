@@ -2,9 +2,8 @@
 
 An API to store and manage links to helpful resources for junior developers.
 
-It allows users to create an account and store links in the database. They can be arranged by tags but not yet searched or sorted by them.
+It allows users to create an account and store links in the database. They can be arranged by tags but not yet searched or sorted by them. Next update will address this and implement new features.
 
-The API does not currently validate game states.
 
 ## User SignUp
 
